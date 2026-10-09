@@ -3,43 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="AM's Mystical Treasures — thoughtfully selected crystals, stones, and spiritual treasures." />
-    <title>AM's Mystical Treasures</title>
+    <meta name="description" content="AM's Mystical Treasures — crystals, stones, carvings, and gifts chosen with intention." />
+    <title>AM's Mystical Treasures | Crystals, Stones & Carvings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top">AM's Mystical Treasures</a>
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#collection">Collection</a>
-        <a href="#contact">Contact</a>
+      <a class="brand" href="#top" aria-label="AM's Mystical Treasures home">
+        <span class="brand-mark">AM</span>
+        <span>AM's Mystical<br /><em>Treasures</em></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav id="navigation" aria-label="Main navigation">
+        <a href="#about">Our story</a>
+        <a href="#collections">Collections</a>
+        <a href="#visit">Connect</a>
       </nav>
     </header>
+
     <main id="top">
       <section class="hero">
-        <p class="eyebrow">Crystals · Stones · Spiritual treasures</p>
-        <h1>Find the piece that speaks to you.</h1>
-        <p>Curated treasures for grounding, intention, beauty, and everyday ritual.</p>
-        <a class="button" href="#collection">Explore the collection</a>
+        <div class="hero-copy">
+          <p class="eyebrow">Curated with intention</p>
+          <h1>Little wonders<br /><i>with soul.</i></h1>
+          <p class="hero-intro">Crystals, stones, carvings, and one-of-a-kind treasures selected for beauty, meaning, and everyday magic.</p>
+          <a class="button" href="#collections">Explore the collection <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="crystal-scene" aria-hidden="true">
+          <div class="moon"></div>
+          <div class="spark spark-one">✦</div>
+          <div class="spark spark-two">✦</div>
+          <div class="spark spark-three">·</div>
+          <div class="crystal crystal-one"></div>
+          <div class="crystal crystal-two"></div>
+          <div class="crystal crystal-three"></div>
+          <div class="ground"></div>
+        </div>
       </section>
-      <section id="about" class="content-section">
-        <p class="eyebrow">Our story</p>
-        <h2>Made for meaningful moments.</h2>
-        <p>AM's Mystical Treasures brings together distinctive crystals, stones, and gifts chosen with care.</p>
+
+      <section id="about" class="about section-wrap">
+        <p class="eyebrow">A little bit of magic</p>
+        <div class="about-grid">
+          <h2>For the things<br />you <i>feel.</i></h2>
+          <div>
+            <p>AM's Mystical Treasures is a collection of natural stones, handcrafted carvings, and meaningful finds for your home, your altar, and the people you love.</p>
+            <p>Every piece is chosen for its distinct character. No two are exactly alike.</p>
+          </div>
+        </div>
       </section>
-      <section id="collection" class="content-section collection">
-        <article><h3>Crystals</h3><p>Discover stones to inspire your space and practice.</p></article>
-        <article><h3>Jewelry</h3><p>Wearable pieces with character and intention.</p></article>
-        <article><h3>Gifts</h3><p>Thoughtful treasures for someone special.</p></article>
+
+      <section id="collections" class="collections">
+        <div class="section-wrap collection-heading">
+          <p class="eyebrow">Discover your next treasure</p>
+          <h2>Made to be found.</h2>
+        </div>
+        <div class="collection-grid section-wrap">
+          <article class="collection-card card-amethyst">
+            <span class="card-number">01</span>
+            <div class="illustration geode" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div><h3>Crystals &amp; stones</h3><p>Natural pieces for intention and inspiration.</p></div>
+          </article>
+          <article class="collection-card card-carving">
+            <span class="card-number">02</span>
+            <div class="illustration carving" aria-hidden="true"><span></span></div>
+            <div><h3>Stone carvings</h3><p>Small works of art with lasting presence.</p></div>
+          </article>
+          <article class="collection-card card-gift">
+            <span class="card-number">03</span>
+            <div class="illustration gift" aria-hidden="true"><span>✦</span></div>
+            <div><h3>Thoughtful gifts</h3><p>Special treasures for a special person.</p></div>
+          </article>
+        </div>
       </section>
-      <section id="contact" class="content-section contact">
-        <p class="eyebrow">Stay connected</p>
-        <h2>Visit or get in touch.</h2>
-        <p>Contact details and social links will be added here.</p>
+
+      <section class="ritual section-wrap">
+        <div class="ritual-art" aria-hidden="true"><span class="ring ring-one"></span><span class="ring ring-two"></span><span class="tiny-star">✦</span><span class="tiny-dot"></span></div>
+        <div class="ritual-copy"><p class="eyebrow">The beauty is in the details</p><h2>Keep what<br />calls to <i>you.</i></h2><p>Whether you are beginning a collection or looking for a meaningful gift, there is always something waiting to be discovered.</p></div>
+      </section>
+
+      <section id="visit" class="visit">
+        <div class="section-wrap visit-inner">
+          <p class="eyebrow">Stay close</p>
+          <h2>New treasures<br />are on the way.</h2>
+          <p>Our online collection is being prepared with care. Check back soon for new arrivals and ways to connect.</p>
+        </div>
       </section>
     </main>
-    <footer>© <span id="year"></span> AM's Mystical Treasures LLC</footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark">AM</span><span>AM's Mystical<br /><em>Treasures</em></span></a>
+      <p>Crystals, stones, carvings &amp; curiosities.</p>
+      <p>© <span id="year"></span> AM's Mystical Treasures LLC</p>
+    </footer>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const toggle = document.querySelector('.menu-toggle');
+      const navigation = document.querySelector('#navigation');
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        navigation.classList.toggle('open', !open);
+      });
+    </script>
   </body>
 </html>

@@ -1,22 +1,37 @@
-:root { --ink: #1f312b; --cream: #f8f6f0; --gold: #ad8d4b; --sage: #bfcbb9; }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--cream); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; }
-a { color: inherit; }
-.site-header { align-items: center; display: flex; justify-content: space-between; max-width: 1120px; margin: auto; padding: 1.5rem 2rem; }
-.brand { font-size: 1.1rem; font-weight: 700; text-decoration: none; }
-nav { display: flex; gap: 1.25rem; font-family: Arial, sans-serif; font-size: .9rem; }
-nav a { text-decoration: none; }
-.hero { background: radial-gradient(circle at 75% 25%, #d9cfb5, transparent 30%), var(--ink); color: var(--cream); min-height: 68vh; padding: 11rem max(2rem, calc((100vw - 1120px) / 2)); }
-.hero h1 { font-size: clamp(3rem, 8vw, 6.5rem); line-height: .95; margin: .5rem 0 1.25rem; max-width: 800px; }
-.hero p:not(.eyebrow) { font-size: 1.2rem; max-width: 580px; }
-.eyebrow { color: var(--gold); font-family: Arial, sans-serif; font-size: .75rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
-.button { background: var(--gold); display: inline-block; font-family: Arial, sans-serif; font-weight: 700; margin-top: 1.5rem; padding: .85rem 1.15rem; text-decoration: none; }
-.content-section { max-width: 1120px; margin: auto; padding: 6rem 2rem; }
-.content-section h2 { font-size: clamp(2.4rem, 4vw, 4rem); line-height: 1; margin: 0 0 1rem; }
-.collection { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, 1fr); }
-.collection article { border-top: 2px solid var(--gold); padding: 1.5rem 0; }
-.collection h3 { font-size: 1.7rem; margin: 0; }
-.contact { background: var(--sage); max-width: none; padding-left: max(2rem, calc((100vw - 1120px) / 2)); padding-right: max(2rem, calc((100vw - 1120px) / 2)); }
-footer { font-family: Arial, sans-serif; font-size: .8rem; padding: 1.5rem 2rem; text-align: center; }
-@media (max-width: 650px) { .site-header { align-items: flex-start; flex-direction: column; gap: 1rem; } .hero { padding-top: 7rem; } .collection { grid-template-columns: 1fr; } }
+:root { --plum:#2c2137; --deep:#171321; --lilac:#b4a0cc; --lavender:#ded5e8; --mist:#f1edf5; --gold:#d6b36b; --ink:#2d2630; --paper:#fcfaf8; --sage:#879783; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { background:var(--paper); color:var(--ink); font-family:'DM Sans',Arial,sans-serif; margin:0; }
+a { color:inherit; }
+.site-header { align-items:center; background:var(--paper); display:flex; justify-content:space-between; padding:1.2rem clamp(1.4rem,4vw,4rem); position:relative; z-index:4; }
+.brand { align-items:center; display:flex; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.13rem; font-weight:700; gap:.65rem; letter-spacing:.01em; line-height:.82; text-decoration:none; }
+.brand em { color:#806895; font-weight:600; }
+.brand-mark { align-items:center; background:var(--plum); border-radius:50%; color:var(--gold); display:inline-flex; font-family:'Cormorant Garamond',Georgia,serif; font-size:1rem; height:2.15rem; justify-content:center; letter-spacing:-.08em; width:2.15rem; }
+nav { display:flex; gap:2.1rem; }
+nav a { color:#42384a; font-size:.8rem; font-weight:600; text-decoration:none; }
+nav a:hover { color:#8b6c9f; }
+.menu-toggle { background:none; border:0; color:var(--plum); display:none; font:600 .75rem 'DM Sans',sans-serif; letter-spacing:.08em; text-transform:uppercase; }
+.hero { background:linear-gradient(120deg,#211a2c 0%,#2f2142 53%,#4d365e 100%); color:var(--paper); display:grid; grid-template-columns:minmax(0,1fr) minmax(290px,.8fr); min-height:680px; overflow:hidden; padding:clamp(5rem,11vw,9rem) clamp(1.4rem,8vw,8rem); position:relative; }
+.hero-copy { align-self:center; max-width:650px; position:relative; z-index:1; }
+.eyebrow { color:#a78bbb; font-size:.69rem; font-weight:600; letter-spacing:.16em; margin:0 0 1.05rem; text-transform:uppercase; }
+.hero h1,.about h2,.collection-heading h2,.ritual h2,.visit h2 { font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(4.2rem,8vw,7.7rem); font-weight:600; letter-spacing:-.055em; line-height:.76; margin:0; }
+h1 i,h2 i { color:#d5c1e7; font-weight:500; }
+.hero-intro { color:#e4dbe9; font-size:1.05rem; line-height:1.7; margin:2.4rem 0 0; max-width:440px; }
+.button { align-items:center; background:var(--gold); color:var(--deep); display:inline-flex; font-size:.76rem; font-weight:600; gap:2.4rem; letter-spacing:.03em; margin-top:2rem; padding:1rem 1.2rem; text-decoration:none; }
+.button span { font-size:1.25rem; line-height:0; }
+.crystal-scene { min-height:460px; position:relative; }
+.moon { background:linear-gradient(140deg,#eee5f3,#bba2cf); border-radius:50%; box-shadow:0 0 100px #d1afea88; height:clamp(135px,17vw,240px); position:absolute; right:7%; top:2%; width:clamp(135px,17vw,240px); }
+.ground { background:#1b1524; border-radius:50% 50% 0 0; bottom:-20%; height:34%; left:2%; position:absolute; transform:rotate(-8deg); width:110%; }
+.crystal { bottom:13%; clip-path:polygon(50% 0,100% 28%,87% 100%,14% 100%,0 28%); position:absolute; transform-origin:bottom center; }
+.crystal-one { background:linear-gradient(115deg,#e7b7ee 0 30%,#8b54a0 32% 61%,#c495cf 63%); height:280px; left:20%; transform:rotate(-10deg); width:170px; }
+.crystal-two { background:linear-gradient(110deg,#d9c2ec 0 27%,#6e4d99 29% 66%,#b996ce 68%); height:210px; left:45%; transform:rotate(9deg); width:130px; }
+.crystal-three { background:linear-gradient(110deg,#cab1e2 0 30%,#60447f 32% 67%,#ab8fc4 69%); height:155px; left:7%; transform:rotate(17deg); width:95px; }
+.spark { color:#f8dc94; position:absolute; z-index:2; }.spark-one{font-size:2.5rem;right:4%;top:48%;}.spark-two{font-size:1.4rem;left:8%;top:12%;}.spark-three{font-size:4rem;right:38%;top:12%;}
+.section-wrap { margin:0 auto; max-width:1250px; padding-left:clamp(1.4rem,7vw,7rem); padding-right:clamp(1.4rem,7vw,7rem); }
+.about { padding-bottom:8rem; padding-top:8rem; }.about-grid { display:grid; gap:5rem; grid-template-columns:1fr .75fr; }.about h2,.collection-heading h2 { color:var(--plum); font-size:clamp(3.5rem,6vw,6.2rem); }.about h2 i,.collection-heading h2 i { color:#9377a8; }.about-grid p { font-size:1.03rem; line-height:1.75; margin:0 0 1.1rem; max-width:440px; }
+.collections { background:var(--mist); padding:7.5rem 0; }.collection-heading { margin-bottom:3rem; }.collection-grid { display:grid; gap:1.1rem; grid-template-columns:repeat(3,1fr); }.collection-card { display:flex; flex-direction:column; min-height:435px; overflow:hidden; padding:1.55rem; position:relative; }.card-amethyst { background:#8967a3; color:#fff; }.card-carving { background:#a8b49b; color:#203323; }.card-gift { background:#d8bc79; color:#382b21; }.card-number { font-size:.72rem; font-weight:600; letter-spacing:.1em; }.collection-card h3 { font-family:'Cormorant Garamond',Georgia,serif; font-size:2.3rem; letter-spacing:-.04em; line-height:.95; margin:0 0 .55rem; }.collection-card p { font-size:.88rem; line-height:1.5; margin:0; max-width:220px; }.collection-card > div:last-child { margin-top:auto; position:relative; z-index:2; }
+.illustration { flex:1; position:relative; }.geode { align-self:center; background:#5c367c; border:13px solid #b999cf; border-radius:50%; box-shadow:inset 0 0 0 12px #784da0,inset 0 0 0 35px #c7aee0; height:145px; margin:3.5rem auto 1.4rem; width:145px; }.geode span { background:#f2ddff; clip-path:polygon(50% 0,61% 37%,100% 50%,61% 63%,50% 100%,39% 63%,0 50%,39% 37%); height:45px; left:37px; position:absolute; top:36px; width:45px; }.geode span:nth-child(2){background:#d099e2; left:8px; top:77px; transform:scale(.42);}.geode span:nth-child(3){background:#fff4ff; left:82px; top:12px; transform:scale(.27);}
+.carving:before { background:#5e7857; border-radius:48% 52% 46% 54% / 42% 45% 55% 58%; bottom:1rem; content:""; height:170px; left:50%; position:absolute; transform:translateX(-50%); width:124px; }.carving span { border:3px solid #bad1ae; border-radius:50% 50% 45% 45%; height:75px; left:50%; position:absolute; top:30%; transform:translateX(-50%); width:63px; }.carving span:after,.carving span:before { background:#bad1ae; border-radius:50%; content:""; height:6px; position:absolute; top:29px; width:6px; }.carving span:before{left:14px}.carving span:after{right:14px}
+.gift:before { background:#f7e8b9; box-shadow:10px 11px 0 #b3854e; content:""; height:115px; left:50%; position:absolute; top:36%; transform:translate(-50%,-50%) rotate(-5deg); width:145px; }.gift:after { border-left:12px solid #9d5d70; border-right:12px solid #9d5d70; content:""; height:115px; left:50%; position:absolute; top:36%; transform:translate(-50%,-50%) rotate(-5deg); width:16px; }.gift span { color:#9d5d70; font-size:2.3rem; left:50%; position:absolute; top:35%; transform:translate(-50%,-50%); z-index:1; }
+.ritual { align-items:center; display:grid; gap:6rem; grid-template-columns:.85fr 1fr; padding-bottom:8rem; padding-top:8rem; }.ritual-art { background:linear-gradient(135deg,#382747,#6b4c7d); min-height:390px; overflow:hidden; position:relative; }.ring { border:1px solid #dbc1e7; border-radius:50%; height:330px; left:50%; opacity:.7; position:absolute; top:50%; transform:translate(-50%,-50%); width:330px; }.ring-two{height:230px;width:230px}.tiny-star{color:#f3d889;font-size:3rem;left:50%;position:absolute;top:50%;transform:translate(-50%,-50%)}.tiny-dot{background:#f3d889;border-radius:50%;height:10px;left:21%;position:absolute;top:25%;width:10px}.ritual h2 { color:var(--plum); font-size:clamp(3.5rem,6vw,6rem); }.ritual p:not(.eyebrow) { font-size:1rem; line-height:1.75; max-width:420px; }.visit { background:#2a2035; color:#fff; text-align:center; }.visit-inner { padding-bottom:7.5rem; padding-top:7.5rem; }.visit .eyebrow{color:#ccb3dc}.visit h2{font-size:clamp(3.8rem,7vw,6.6rem)}.visit p:not(.eyebrow){color:#ddd3e3;line-height:1.65;margin:2rem auto 0;max-width:510px}.site-footer{align-items:center;display:flex;gap:2rem;justify-content:space-between;padding:2rem clamp(1.4rem,4vw,4rem)}.site-footer p{color:#786f79;font-size:.72rem;margin:0}.footer-brand{font-size:.88rem}.footer-brand .brand-mark{height:1.8rem;width:1.8rem}
+@media (max-width:760px) { .site-header{padding:1rem 1.25rem}.menu-toggle{display:block}nav{background:var(--paper);box-shadow:0 12px 30px #1f142824;display:none;flex-direction:column;gap:1rem;padding:1.2rem;position:absolute;right:1rem;top:4.8rem}nav.open{display:flex}.hero{grid-template-columns:1fr;min-height:700px;padding:5rem 1.4rem 0}.hero h1{font-size:4.6rem}.crystal-scene{min-height:300px}.moon{top:-7%;right:2%}.crystal-one{height:190px;width:118px}.crystal-two{height:145px;width:90px}.crystal-three{height:110px;width:70px}.about{padding-bottom:5rem;padding-top:5rem}.about-grid,.ritual{gap:2rem;grid-template-columns:1fr}.collection-grid{grid-template-columns:1fr}.collection-card{min-height:335px}.ritual{padding-bottom:5rem;padding-top:5rem}.ritual-art{min-height:300px}.site-footer{align-items:flex-start;flex-direction:column;gap:1rem} }
